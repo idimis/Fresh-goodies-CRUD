@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "d40d0acd-3c48-4be7-89e1-d61e0d50cb1c",
+		"name": "Fresh Goodies CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29445946"
+	},
+	"item": [
+		{
+			"name": "Product Test",
+			"item": [
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{product-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Ascending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{domain}}:{{port}}/{{product-address}}?_sort=name&_order=asc",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}"
+							],
+							"query": [
+								{
+									"key": "_sort",
+									"value": "name"
+								},
+								{
+									"key": "_order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Descending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{domain}}:{{port}}/{{product-address}}?_sort=name&_order=desc",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}"
+							],
+							"query": [
+								{
+									"key": "_sort",
+									"value": "name"
+								},
+								{
+									"key": "_order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"price\": 0.0032,\r\n        \"weight\": 1000,\r\n        \"name\": \"Beetles\",\r\n        \"category\": \"Exotic\",\r\n        \"imageUrl\": \"/products/beetles.png\",\r\n        \"metadata\": {\r\n            \"unit\": \"g\",\r\n            \"weight\": 100,\r\n            \"calorie\": 190,\r\n            \"proteins\": 24,\r\n            \"fats\": 9,\r\n            \"increment\": 100,\r\n            \"carbs\": 2\r\n        },\r\n        \"id\": \"999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{product-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"price\": 0.0032,\r\n        \"weight\": 1000,\r\n        \"name\": \"kucing\",\r\n        \"category\": \"Exotic\",\r\n        \"imageUrl\": \"/products/beetles.png\",\r\n        \"metadata\": {\r\n            \"unit\": \"g\",\r\n            \"weight\": 100,\r\n            \"calorie\": 190,\r\n            \"proteins\": 24,\r\n            \"fats\": 9,\r\n            \"increment\": 100,\r\n            \"carbs\": 2\r\n        },\r\n        \"id\": \"999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{product-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{product-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"price\": 0.0032,\r\n        \"weight\": 1000,\r\n        \"name\": \"Beetles\",\r\n        \"category\": \"Exotic\",\r\n        \"imageUrl\": \"/products/beetles.png\",\r\n        \"metadata\": {\r\n            \"unit\": \"g\",\r\n            \"weight\": 100,\r\n            \"calorie\": 190,\r\n            \"proteins\": 24,\r\n            \"fats\": 9,\r\n            \"increment\": 100,\r\n            \"carbs\": 2\r\n        },\r\n        \"id\": \"999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{product-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{product-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart Test",
+			"item": [
+				{
+					"name": "Get Cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{cart-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{cart-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{cart-address}}\\100",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{cart-address}}",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{cart-address}}\\100",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{cart-address}}",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"100\",\r\n        \"productId\": \"0\",\r\n        \"quantity\": 12345679\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{cart-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{cart-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"100\",\r\n        \"productId\": \"6\",\r\n        \"quantity\": 666\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{cart-address}}\\100",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{cart-address}}",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorite Test",
+			"item": [
+				{
+					"name": "Get Favorite",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{favorite-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{favorite-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Favorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{favorite-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{favorite-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Favorite",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{favorite-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{favorite-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Favorite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"productId\": 0,\r\n        \"id\": \"999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{favorite-address}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{favorite-address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Favorite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"productId\": 555,\r\n        \"id\": \"999\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}:\\\\{{domain}}:{{port}}\\{{favorite-address}}\\999",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{favorite-address}}",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
